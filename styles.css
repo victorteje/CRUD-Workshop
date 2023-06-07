@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to top right, darkseagreen, lightyellow);
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: darkviolet;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 2%;
+}
+
+button {
+    border-radius: 8px;
+    width: 64px;
+    height: 24px;
+}
