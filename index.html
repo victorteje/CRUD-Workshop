@@ -11,14 +11,13 @@
 <body>
     <h1>CRUD Workshop</h1>
     <h2>To-Do List</h2>
-    <h3>Introduce a task:</h3>
-    <input type="text">
+    <input id="task" type="text" placeholder="Enter a task here">
     <section class="buttons">
-        <button>Create</button>
-        <button>Read</button>
-        <button>Update</button>
-        <button>Delete</button>
-        <button>Edit</button>
+        <button onclick="createItem()">Create</button>
+        <button onclick="readItem()">Read</button>
+        <button onclick="updateItem()">Update</button>
+        <button onclick="deleteItem()">Delete</button>
+        <button onclick="editItem()">Edit</button>
     </section>
 </body>
 </html>
