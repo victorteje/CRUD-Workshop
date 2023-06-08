@@ -7,19 +7,20 @@
     <title>CRUD Workshop</title>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>CRUD Workshop</h1>
-    <h2>To-Do List</h2>
-    <input id="task" type="text" placeholder="Enter a task here">
-    <section class="buttons">
-        <button onclick="createItem()">Create</button>
-        <button onclick="readItem()">Read</button>
-        <button onclick="updateItem()">Update</button>
-        <button onclick="deleteItem()">Delete</button>
-        <button onclick="editItem()">Edit</button>
+<body class="bg-gradient-to-b from-lime-200 to-yellow-100 h-screen text-center flex-col items-center flex-wrap">
+    <h1 class="text-violet-600 text-3xl mt-6">CRUD Workshop</h1>
+    <h2 class="underline text-2xl mt-6">To-Do List</h2>
+    <input id="task" type="text" placeholder="Enter a task here" class=" mt-6 text-center">
+    <section class="flex-row justify-center gap-3 mt-6">
+        <button onclick="createItem()" class="px-3 py-1 rounded-full bg-amber-300 font-bold">Create</button>
+        <button onclick="readItem()" class="px-3 py-1 rounded-full bg-amber-300 font-bold">Read</button>
+        <button onclick="updateItem()" class="px-3 py-1 rounded-full bg-amber-300 font-bold">Update</button>
+        <button onclick="deleteItem()" class="px-3 py-1 rounded-full bg-amber-300 font-bold">Delete</button>
+        <button onclick="editItem()" class="px-3 py-1 rounded-full bg-amber-300 font-bold">Edit</button>
     </section>
-    <h3>Pending tasks</h3>
+    <h3 class="text-2xl mt-6">Pending tasks</h3>
     <ul id="pending"></ul>
 </body>
 </html>
