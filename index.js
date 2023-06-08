@@ -1,6 +1,7 @@
+// let item = document.getElementById("task").value;
+
 const createItem = () => {
     let item = document.getElementById("task").value;
-    console.log(item);
     localStorage.setItem("created", item);
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
@@ -9,7 +10,8 @@ const createItem = () => {
 }
 
 const readItem = () => {
-    
+    let item = document.getElementById("task").value;
+    localStorage.getItem(item);
 }
 
 const updateItem = () => {
@@ -17,7 +19,8 @@ const updateItem = () => {
 }
 
 const deleteItem = () => {
-    
+    let item = document.getElementById("task").value;
+    localStorage.removeItem(item);
 }
 
 const editItem = () => {
