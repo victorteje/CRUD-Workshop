@@ -1,8 +1,10 @@
 li button {
     width: fit-content;
-    padding: 2px 16px;
-    background-color: mediumaquamarine;
-    border-radius: 16px;
+    padding: 1px 8px;
+    background-color: crimson;
+    border-radius: 4px;
+    color: white;
+    font-size: small;
 }
 
 div {
@@ -11,3 +13,4 @@ div {
     display: flex;
     justify-content: space-around;
 }
+
