@@ -43,7 +43,7 @@ const createItem = () => {
     deleteTask.addEventListener("click", deleteItem);
 
     function deleteItem() {
-        // let deleteTask = document.getElementsByClassName("pendingTask");
-        // localStorage.deleteItem("pendingTask");
+        localStorage.removeItem(getItem);
+        pendingTask.remove();
     }
 }
