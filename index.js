@@ -1,5 +1,3 @@
-// let item = document.getElementById("task").value;
-
 const createItem = () => {
     let item = document.getElementById("task").value;
     localStorage.setItem("created", item);
@@ -7,6 +5,7 @@ const createItem = () => {
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
     pendingList.appendChild(pendingTask);
+    pendingTask.className = "pendingTask"
     let taskContainer = document.createElement("div");
     pendingTask.appendChild(taskContainer);
 
@@ -19,37 +18,32 @@ const createItem = () => {
     taskText.setAttribute("value", getItem);
     taskText.readOnly = true;
     taskText.className = "taskInput"
+    console.log(getItem);
     
     taskContainer.appendChild(taskText);
     let editTask = document.createElement("button");
-    editTask.innerText = "Edit";
+    editTask.innerText = "Edit / Save";
     editTask.className = "editButton";
     taskContainer.appendChild(editTask);
-    // editTask.onclick = localStorage.removeItem(getItem);
-    editTask.addEventListener("click", editInput);
-    function editInput(){
-        taskText.readOnly = false;
+    editTask.addEventListener("click", editItem);
+
+    function editItem() {
+        if (taskText.readOnly === true) {
+            taskText.readOnly = false;
+        }
+        else {
+            taskText.readOnly = true;
+        }
     }
 
     let deleteTask = document.createElement("button");
     deleteTask.innerText = "Delete";
+    deleteTask.className = "deleteButton";
     taskContainer.appendChild(deleteTask);
-}
+    deleteTask.addEventListener("click", deleteItem);
 
-const readItem = () => {
-    let item = document.getElementById("task").value;
-    localStorage.getItem(item);
-}
-
-const updateItem = () => {
-    
-}
-
-const deleteItem = () => {
-    let item = document.getElementById("task").value;
-    localStorage.removeItem(item);
-}
-
-const editItem = () => {
-    
+    function deleteItem() {
+        // let deleteTask = document.getElementsByClassName("pendingTask");
+        // localStorage.deleteItem("pendingTask");
+    }
 }
