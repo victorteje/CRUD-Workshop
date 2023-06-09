@@ -5,13 +5,19 @@ const createItem = () => {
     localStorage.setItem("created", item);
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
-    pendingTask.innerHTML = item;
     pendingList.appendChild(pendingTask);
-    let space = document.createTextNode(" ");
-    pendingTask.appendChild(space);
     let checkCompleted = document.createElement("input");
     checkCompleted.setAttribute("type", "checkbox");
     pendingTask.appendChild(checkCompleted);
+    let taskText = document.createElement("p");
+    taskText.innerHTML = item;
+    pendingTask.appendChild(taskText);
+    let editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    pendingTask.appendChild(editButton);
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    pendingTask.appendChild(deleteButton);
 }
 
 const readItem = () => {

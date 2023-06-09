@@ -1,0 +1,6 @@
+li button {
+    width: fit-content;
+    padding: 2px 16px;
+    background-color: mediumaquamarine;
+    border-radius: 16px;
+}
