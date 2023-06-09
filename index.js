@@ -18,7 +18,6 @@ const createItem = () => {
     taskText.setAttribute("value", getItem);
     taskText.readOnly = true;
     taskText.className = "taskInput"
-    console.log(getItem);
     
     taskContainer.appendChild(taskText);
     let editTask = document.createElement("button");
