@@ -7,6 +7,11 @@ const createItem = () => {
     let pendingTask = document.createElement("li");
     pendingTask.innerHTML = item;
     pendingList.appendChild(pendingTask);
+    let space = document.createTextNode(" ");
+    pendingTask.appendChild(space);
+    let checkCompleted = document.createElement("input");
+    checkCompleted.setAttribute("type", "checkbox");
+    pendingTask.appendChild(checkCompleted);
 }
 
 const readItem = () => {
