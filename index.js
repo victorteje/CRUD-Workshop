@@ -1,7 +1,7 @@
 const createItem = () => {
     let item = document.getElementById("task").value;
-    localStorage.setItem("created", item);
-    let getItem = localStorage.getItem("created");
+    localStorage.setItem("setItem", item);
+    let getItem = localStorage.getItem("setItem");
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
     pendingList.appendChild(pendingTask);
@@ -46,4 +46,7 @@ const createItem = () => {
         localStorage.removeItem(getItem);
         pendingTask.remove();
     }
+
+    let clearInput = document.getElementById("task");
+    clearInput.value = "";
 }
