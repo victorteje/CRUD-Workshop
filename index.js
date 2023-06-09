@@ -6,18 +6,20 @@ const createItem = () => {
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
     pendingList.appendChild(pendingTask);
+    let taskContainer = document.createElement("div");
+    pendingTask.appendChild(taskContainer);
     let checkCompleted = document.createElement("input");
     checkCompleted.setAttribute("type", "checkbox");
-    pendingTask.appendChild(checkCompleted);
+    taskContainer.appendChild(checkCompleted);
     let taskText = document.createElement("p");
     taskText.innerHTML = item;
-    pendingTask.appendChild(taskText);
+    taskContainer.appendChild(taskText);
     let editButton = document.createElement("button");
     editButton.innerText = "Edit";
-    pendingTask.appendChild(editButton);
+    taskContainer.appendChild(editButton);
     let deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
-    pendingTask.appendChild(deleteButton);
+    taskContainer.appendChild(deleteButton);
 }
 
 const readItem = () => {

@@ -4,3 +4,10 @@ li button {
     background-color: mediumaquamarine;
     border-radius: 16px;
 }
+
+div {
+    margin: 2% auto;
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+}
