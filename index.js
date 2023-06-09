@@ -3,6 +3,7 @@
 const createItem = () => {
     let item = document.getElementById("task").value;
     localStorage.setItem("created", item);
+    let getItem = localStorage.getItem("created");
     let pendingList = document.getElementById("pending");
     let pendingTask = document.createElement("li");
     pendingList.appendChild(pendingTask);
@@ -11,15 +12,22 @@ const createItem = () => {
     let checkCompleted = document.createElement("input");
     checkCompleted.setAttribute("type", "checkbox");
     taskContainer.appendChild(checkCompleted);
-    let taskText = document.createElement("p");
-    taskText.innerHTML = item;
+    let taskText = document.createElement("input");
+    taskText.setAttribute("type", "text");
+    taskText.setAttribute("value", getItem);
+    taskText.readOnly = true;
+    
     taskContainer.appendChild(taskText);
-    let editButton = document.createElement("button");
-    editButton.innerText = "Edit";
-    taskContainer.appendChild(editButton);
-    let deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    taskContainer.appendChild(deleteButton);
+    let editTask = document.createElement("button");
+    editTask.innerText = "Edit";
+    editTask.className = "editButton";
+    taskContainer.appendChild(editTask);
+    editTask.onclick = localStorage.removeItem(getItem);
+
+
+    let deleteTask = document.createElement("button");
+    deleteTask.innerText = "Delete";
+    taskContainer.appendChild(deleteTask);
 }
 
 const readItem = () => {
