@@ -1,4 +1,4 @@
-const createItem = () => {
+const addTask = () => {
     let item = document.getElementById("task").value;
     localStorage.setItem("storedItem", item);
     
@@ -38,6 +38,8 @@ const createItem = () => {
         else {
             taskText.readOnly = true;
             taskText.className = "taskInput";
+            taskText.value = localStorage.setItem("storedItem", taskText.value);
+            taskText.value = localStorage.getItem("storedItem");
         }
     }
 
