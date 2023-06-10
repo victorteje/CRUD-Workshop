@@ -20,7 +20,7 @@ const createItem = () => {
     let taskText = document.createElement("input");
     taskText.setAttribute("type", "text");
     taskText.setAttribute("value", getItem);
-    taskText.readonly = true;
+    taskText.readOnly = true;
     taskText.className = "taskInput";
     taskContainer.appendChild(taskText);
     
@@ -31,8 +31,8 @@ const createItem = () => {
     editTask.addEventListener("click", editItem);
 
     function editItem() {
-        if (taskText.readonly === true) {
-            taskText.readonly = false;
+        if (taskText.readOnly === true) {
+            taskText.readOnly = false;
             taskText.classList.remove("taskInput");
         }
         else {
