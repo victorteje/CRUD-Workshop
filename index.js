@@ -1,11 +1,15 @@
 const createItem = () => {
     let item = document.getElementById("task").value;
     localStorage.setItem("setItem", item);
+    
     let getItem = localStorage.getItem("setItem");
+    
     let pendingList = document.getElementById("pending");
+    
     let pendingTask = document.createElement("li");
+    pendingTask.className = "pendingTask";
     pendingList.appendChild(pendingTask);
-    pendingTask.className = "pendingTask"
+    
     let taskContainer = document.createElement("div");
     pendingTask.appendChild(taskContainer);
 
