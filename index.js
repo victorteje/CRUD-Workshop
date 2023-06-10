@@ -1,8 +1,8 @@
 const createItem = () => {
     let item = document.getElementById("task").value;
-    localStorage.setItem("setItem", item);
+    localStorage.setItem("storedItem", item);
     
-    let getItem = localStorage.getItem("setItem");
+    let getItem = localStorage.getItem("storedItem");
     
     let pendingList = document.getElementById("pending");
     
@@ -48,7 +48,7 @@ const createItem = () => {
     deleteTask.addEventListener("click", deleteItem);
 
     function deleteItem() {
-        localStorage.removeItem(getItem);
+        localStorage.removeItem("storedItem");
         pendingTask.remove();
     }
 
@@ -58,7 +58,7 @@ const createItem = () => {
 
 const clearList = () => {
     if (confirm("Delete all tasks?") == true) {
-    localStorage.clear("getItem");
+    localStorage.clear("storedItem");
     let removeList = document.getElementById("pending");
     removeList.remove();
     }
