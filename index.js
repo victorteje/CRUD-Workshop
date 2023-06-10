@@ -55,3 +55,11 @@ const createItem = () => {
     let clearInput = document.getElementById("task");
     clearInput.value = "";
 }
+
+const clearList = () => {
+    if (confirm("Delete all tasks?") == true) {
+    localStorage.clear("getItem");
+    let removeList = document.getElementById("pending");
+    removeList.remove();
+    }
+}
