@@ -2,7 +2,8 @@ div {
     margin: 2% auto;
     width: 25rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5%;
 }
 
 li button {
@@ -19,4 +20,13 @@ li button {
 
 .deleteButton {
     background-color: crimson;
+}
+
+input {
+    text-align: center;
+}
+
+.taskInput {
+    border: none;
+    background: transparent;
 }
