@@ -60,7 +60,7 @@ const addTask = () => {
 
 const clearList = () => {
     if (confirm("Delete all tasks?") == true) {
-    localStorage.clear("storedItem");
+    localStorage.clear();
     let removeList = document.getElementById("pending");
     removeList.remove();
     }
